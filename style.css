@@ -1,0 +1,104 @@
+:root {
+  --primary-dark: hsl(300, 43%, 22%);
+  --primary-light: hsl(333, 80%, 67%);
+
+  --neutral-dark: hsl(303, 10%, 53%);
+  --neutral-light: hsl(300, 24%, 96%);
+
+  --fs-400: 0.8125rem;
+  --fs-500: 0.9625rem;
+  --fs-900: 2rem;
+
+  --ff: "League Spartan", sans-serif;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --lh-body: 1.2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  ******** MOBILE ******* */
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-400);
+  height: 100vh;
+  line-height: var(--lh-body);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  padding: 3rem 2rem;
+}
+
+.flex-box.blurb {
+  text-align: center;
+  color: var(--neutral-dark);
+}
+
+h1 {
+  font-size: var(--fs-900);
+  color: var(--primary-dark);
+  font-weight: var(--fw-700);
+  padding-bottom: 1rem;
+  line-height: 0.9;
+}
+
+.reviews-box {
+  padding: 2rem 0;
+  color: var(--primary-dark);
+  font-weight: var(--fw-500);
+}
+
+.review {
+  background-color: var(--neutral-light);
+  border-radius: 0.3rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card {
+  background-color: var(--primary-dark);
+  border-radius: 0.6rem;
+  color: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.buyer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.buyer-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.buyer-name h2 {
+  font-weight: var(--fw-700);
+}
+
+.verified {
+  font-weight: var(--fw-400);
+  color: var(--primary-light);
+}
+
+/*  ******* DESKTOP ********* */
+@media (min-width: 376px) {
+}
