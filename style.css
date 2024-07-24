@@ -28,14 +28,21 @@
 body {
   font-family: var(--ff);
   font-size: var(--fs-400);
-  height: 100vh;
+  min-height: 100vh;
   line-height: var(--lh-body);
+  background-image: url("/images/bg-pattern-bottom-mobile.svg"),
+    url("/images/bg-pattern-top-mobile.svg");
+  background-position: center bottom, left top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container {
   display: grid;
   grid-template-rows: auto auto;
-  padding: 3rem 2rem;
+  padding: 3rem 2.5rem;
 }
 
 .flex-box.blurb {
@@ -62,6 +69,14 @@ h1 {
   border-radius: 0.3rem;
   padding: 1rem 0;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stars img {
+  height: auto;
 }
 
 .testimonial-card {
@@ -76,7 +91,6 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  height: 40px;
   margin-bottom: 1rem;
 }
 
@@ -99,6 +113,75 @@ img {
   color: var(--primary-light);
 }
 
+/*  ******* TABLET ********** */
+
 /*  ******* DESKTOP ********* */
-@media (min-width: 376px) {
+@media (min-width: 600px) {
+  body {
+    font-size: var(--fs-500);
+    background-image: url("/images/bg-pattern-bottom-desktop.svg"),
+      url("/images/bg-pattern-top-desktop.svg");
+    background-position: right bottom, left top;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 8rem;
+    max-width: 1500px;
+  }
+  .buyer-info {
+    flex-direction: column;
+  }
+  .flex-box.testimonial {
+    display: flex;
+    gap: 1rem;
+  }
+  .testimonial-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-container {
+    padding: 12rem;
+    grid-template-rows: 1fr 1fr;
+  }
+  .flex-box.blurb {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .intro-box {
+    text-align: start;
+    width: 380px;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .reviews-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .review {
+    width: 80%;
+    flex-direction: row;
+  }
+  .review.second {
+    align-self: center;
+  }
+  .review.third {
+    align-self: flex-end;
+  }
+  .buyer-info {
+    flex-direction: row;
+  }
+  .testimonial-card.first {
+    align-self: flex-start;
+  }
+  .testimonial-card.second {
+    align-self: center;
+  }
+  .testimonial-card.third {
+    align-self: flex-end;
+  }
 }
