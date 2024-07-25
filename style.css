@@ -35,6 +35,7 @@ body {
   background-position: center bottom, left top;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
